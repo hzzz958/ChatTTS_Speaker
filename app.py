@@ -313,4 +313,9 @@ params_infer_code = {
             """)
 
 if __name__ == "__main__":
-    demo.launch()
+    demo.launch(
+        share=True,          # ← 核心：生成 public URL（如 https://xxxx.gradio.live）
+        server_name="0.0.0.0",  # 可选，但加了更稳
+        server_port=7860,    # 可选，指定端口（默认就是7860）
+        debug=True           # 可选，方便看错误日志
+    )
